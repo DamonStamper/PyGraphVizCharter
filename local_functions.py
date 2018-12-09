@@ -41,7 +41,7 @@ def get_file_content (file_path):
 			logger.debug(f'Reading contents of {file_path}')
 			file_content = file.read()
 			logger.debug(f'Finished reading contents of {file_path}:')
-			logger.debug(f'file_content:')
+			logger.debug(f'file_content: {file_content}')
 		except:
 			raise Exception(f'could not read file {file_path}')
 		finally:
