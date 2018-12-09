@@ -33,11 +33,6 @@ optional arguments:
   						This switch adds a node with the same name as the filename that contained the YAML for a graph as a top level node in that file's resulting graph.
 """
 
-#This script recursively searches for .dotyaml files under a directory (defaults to current directory) and generates a GraphViz graph for each one, as well as a combined graph.
-#TODO: Should this output subgraphs to the same place we found the source?
-#TODO: Have each subgraph in the mastergraph be in it's own subgraph to keep subgraphs contents together when in the mastergraph--also color the graphs. 
-#TODO: Figure out how to get an init function setup such that variables and stuff survive the init's scope destruction.
-
 try:
 	import os
 	import logging
