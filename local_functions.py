@@ -58,7 +58,9 @@ def filepath_to_list (file_path):
 	for line in file_content.splitlines():
 		#ignore empty lines
 		if line:
+			logger.debug(f'Working on line {line}')
 			split = line.split(' : ')
+			logger.debug(f"split results = \n {split}")
 			if split[0] == current_key:
 				data.setdefault(split[0], [])
 				data[split[0]].append(split[1])

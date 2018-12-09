@@ -1,4 +1,4 @@
-mother -> son
-mother -> daughter
-"maternal grandfather" -> mother 
-"maternal grandmother" -> mother 
+mother : son
+mother : daughter
+"maternal grandfather" : mother 
+"maternal grandmother" : mother 

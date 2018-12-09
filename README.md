@@ -1,3 +1,8 @@
+# What it does
+This python code will take multiple files containing key value pairs and make a directed graph out of them. The ultimate goal of this is to make a dynamic dependency chart that can be used to determine what is affected by or what will be affected by a change in a node of the diagram (for example to be used when planning IT maintenence)
+
+Possible overloads include graphing family trees, and allowing the tree to be isolated to a single person's lineage.
+
 # Requirements  
 Python v3.6  
 (see contents of [requirements.txt](requirements.txt))
@@ -9,11 +14,12 @@ Python v3.6
 `py dotyaml_to_graphs.py --source input/`
 
 ## Source file contents
-Similar to GraphViz source files.
+Source files should be raw text files with "key : value" content, with as many lines as desired.
+
 
 ```
-Key1 -> Key2
-Key2 -> "Key 3"
+Key1 : Key2
+Key2 : "Key 3"
 ```
 
 See example files in the 'input' directory
