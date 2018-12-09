@@ -53,7 +53,6 @@ def get_file_content (file_path):
 def filepath_to_list (file_path):
 	"""Get the content of a file containing with a "key : value" data structure and convert it into a list python data structure"""
 	data = dict()
-	current_key = ""
 	file_content = get_file_content(file_path)
 	for line in file_content.splitlines():
 		#ignore empty lines
@@ -61,15 +60,8 @@ def filepath_to_list (file_path):
 			logger.debug(f'Working on line {line}')
 			split = line.split(' : ')
 			logger.debug(f"split results = \n {split}")
-			if split[0] == current_key:
-				data.setdefault(split[0], [])
-				data[split[0]].append(split[1])
-				#data[split[0]].append(split[1])
-			else:
-				current_key = split[0]
-				data.setdefault(split[0], [])
-				data[split[0]].append(split[1])
-				#data[split[0]] = split[1]
+			data.setdefault(split[0], [])
+			data[split[0]].append(split[1])
 	return data
 	
 def graphviz_graph_create_placeholder_if_empty (graph_name, dict_object):
