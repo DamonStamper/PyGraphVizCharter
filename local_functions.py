@@ -60,8 +60,8 @@ def filepath_to_list (file_path):
 			logger.debug(f'Working on line {line}')
 			split = line.split(' : ')
 			logger.debug(f"split results = \n {split}")
-			data.setdefault(split[0], [])
-			data[split[0]].append(split[1])
+			data.setdefault(split[0].strip(), [])
+			data[split[0]].append(split[1].strip())
 	return data
 	
 def graphviz_graph_create_placeholder_if_empty (graph_name, dict_object):
